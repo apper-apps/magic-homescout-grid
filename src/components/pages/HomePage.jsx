@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
-      import { toast } from 'react-toastify'
-      import PropTypes from 'prop-types'
-      import Icon from '@/components/atoms/Icon'
-      import Text from '@/components/atoms/Text'
-      import Header from '@/components/organisms/Header'
-      import SearchFilterBar from '@/components/organisms/SearchFilterBar'
-      import PropertyGrid from '@/components/organisms/PropertyGrid'
-      import PropertyDetailModal from '@/components/organisms/PropertyDetailModal'
-      import propertyService from '@/services/api/propertyService'
-      import favoriteService from '@/services/api/favoriteService'
+import { toast } from 'react-toastify'
+import PropTypes from 'prop-types'
+import Icon from '../atoms/Icon'
+import Text from '../atoms/Text'
+import Header from '../organisms/Header'
+import SearchFilterBar from '../organisms/SearchFilterBar'
+import PropertyGrid from '../organisms/PropertyGrid'
+import PropertyDetailModal from '../organisms/PropertyDetailModal'
+import propertyService from '../../services/api/propertyService'
+import favoriteService from '../../services/api/favoriteService'
       
       const HomePage = ({ darkMode, setDarkMode }) => {
         const [properties, setProperties] = useState([])
@@ -27,18 +27,20 @@ import React, { useState, useEffect } from 'react'
         const [showFilters, setShowFilters] = useState(false)
         const [selectedProperty, setSelectedProperty] = useState(null)
       
-        useEffect(() => {
+useEffect(() => {
           const loadData = async () => {
             setLoading(true)
+            setError(null)
             try {
               const [propertiesResult, favoritesResult] = await Promise.all([
                 propertyService.getAll(),
                 favoriteService.getAll()
               ])
-              setProperties(propertiesResult)
-              setFavorites(favoritesResult)
+              setProperties(Array.isArray(propertiesResult) ? propertiesResult : [])
+              setFavorites(Array.isArray(favoritesResult) ? favoritesResult : [])
             } catch (err) {
-              setError(err.message)
+              const errorMessage = err?.message || 'An unexpected error occurred'
+              setError(errorMessage)
               toast.error('Failed to load properties')
             } finally {
               setLoading(false)
@@ -47,7 +49,12 @@ import React, { useState, useEffect } from 'react'
           loadData()
         }, [])
       
-        const toggleFavorite = async (propertyId) => {
+const toggleFavorite = async (propertyId) => {
+          if (!propertyId) {
+            toast.error('Invalid property ID')
+            return
+          }
+          
           try {
             const existingFavorite = favorites.find(fav => fav.propertyId === propertyId)
       
@@ -61,29 +68,41 @@ import React, { useState, useEffect } from 'react'
                 savedDate: new Date().toISOString(),
                 notes: ''
               })
-              setFavorites(prev => [...prev, newFavorite])
-              toast.success('Property added to favorites')
+              if (newFavorite) {
+                setFavorites(prev => [...prev, newFavorite])
+                toast.success('Property added to favorites')
+              }
             }
           } catch (err) {
-            toast.error('Failed to update favorites')
+            const errorMessage = err?.message || 'Failed to update favorites'
+            toast.error(errorMessage)
           }
         }
       
-        const filteredProperties = properties.filter(property => {
-          const matchesSearch = property.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                               property.address?.city?.toLowerCase().includes(searchTerm.toLowerCase())
+const filteredProperties = Array.isArray(properties) ? properties.filter(property => {
+          if (!property) return false
+          
+          const matchesSearch = !searchTerm || 
+            property.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            property.address?.city?.toLowerCase().includes(searchTerm.toLowerCase())
       
-          const matchesPrice = (!filters.priceMin || property.price >= parseInt(filters.priceMin)) &&
-                              (!filters.priceMax || property.price <= parseInt(filters.priceMax))
+          const minPrice = filters.priceMin ? parseInt(filters.priceMin) : 0
+          const maxPrice = filters.priceMax ? parseInt(filters.priceMax) : Infinity
+          const matchesPrice = (!filters.priceMin || (property.price && property.price >= minPrice)) &&
+                              (!filters.priceMax || (property.price && property.price <= maxPrice))
       
-          const matchesType = filters.propertyType.length === 0 || filters.propertyType.includes(property.type)
+          const matchesType = !Array.isArray(filters.propertyType) || 
+                             filters.propertyType.length === 0 || 
+                             filters.propertyType.includes(property.type)
       
-          const matchesBedrooms = !filters.bedrooms || property.bedrooms >= parseInt(filters.bedrooms)
+          const bedroomCount = filters.bedrooms ? parseInt(filters.bedrooms) : 0
+          const matchesBedrooms = !filters.bedrooms || (property.bedrooms && property.bedrooms >= bedroomCount)
       
-          const matchesBathrooms = !filters.bathrooms || property.bathrooms >= parseInt(filters.bathrooms)
+          const bathroomCount = filters.bathrooms ? parseInt(filters.bathrooms) : 0
+          const matchesBathrooms = !filters.bathrooms || (property.bathrooms && property.bathrooms >= bathroomCount)
       
           return matchesSearch && matchesPrice && matchesType && matchesBedrooms && matchesBathrooms
-        })
+        }) : []
       
         if (loading) {
           return (

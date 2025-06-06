@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
-      import PropTypes from 'prop-types'
-      import { motion, AnimatePresence } from 'framer-motion'
-      import Icon from '@/components/atoms/Icon'
-      import Button from '@/components/atoms/Button'
-      import Text from '@/components/atoms/Text'
-      import StatCard from '@/components/molecules/StatCard'
+import PropTypes from 'prop-types'
+import { motion, AnimatePresence } from 'framer-motion'
+import Icon from '../atoms/Icon'
+import Button from '../atoms/Button'
+import Text from '../atoms/Text'
+import StatCard from '../molecules/StatCard'
       
       const PropertyDetailModal = ({ property, favorites, onClose, onToggleFavorite }) => {
         const [imageIndex, setImageIndex] = useState(0)
@@ -74,28 +74,28 @@ import React, { useState, useEffect } from 'react'
                         </Text>
                       </div>
                       <div className="text-right">
-                        <Text as="div" className="text-3xl font-bold text-primary mb-1">
-                          ${property.price?.toLocaleString()}
+<Text as="div" className="text-3xl font-bold text-primary mb-1">
+                          ${property.price?.toLocaleString() || 'N/A'}
                         </Text>
                         <Text as="div" className="text-sm text-surface-600 dark:text-surface-400">
-                          ${Math.round(property.price / property.sqft)} per sqft
+                          {property.price && property.sqft ? `$${Math.round(property.price / property.sqft)} per sqft` : 'Price per sqft N/A'}
                         </Text>
                       </div>
                     </div>
       
-                    <div className="grid grid-cols-4 gap-4 mb-6">
-                      <StatCard iconName="Bed" value={property.bedrooms} label="Bedrooms" />
-                      <StatCard iconName="Bath" value={property.bathrooms} label="Bathrooms" />
-                      <StatCard iconName="Square" value={property.sqft?.toLocaleString()} label="Sq Ft" />
-                      <StatCard iconName="Home" value={property.type} label="Type" />
+<div className="grid grid-cols-4 gap-4 mb-6">
+                      <StatCard iconName="Bed" value={property.bedrooms || 0} label="Bedrooms" />
+                      <StatCard iconName="Bath" value={property.bathrooms || 0} label="Bathrooms" />
+                      <StatCard iconName="Square" value={property.sqft?.toLocaleString() || 'N/A'} label="Sq Ft" />
+                      <StatCard iconName="Home" value={property.type || 'N/A'} label="Type" />
                     </div>
       
                     <div className="mb-6">
                       <Text as="h3" className="text-lg font-semibold text-surface-800 dark:text-surface-200 mb-3">
                         Description
-                      </Text>
+</Text>
                       <Text as="p" className="text-surface-600 dark:text-surface-400 leading-relaxed">
-                        {property.description}
+                        {property.description || 'No description available.'}
                       </Text>
                     </div>
       

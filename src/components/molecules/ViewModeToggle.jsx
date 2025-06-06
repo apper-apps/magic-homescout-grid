@@ -1,7 +1,7 @@
 import React from 'react'
-      import PropTypes from 'prop-types'
-      import Button from '@/components/atoms/Button'
-      import Icon from '@/components/atoms/Icon'
+import PropTypes from 'prop-types'
+import Button from '../atoms/Button'
+import Icon from '../atoms/Icon'
       
       const ViewModeToggle = ({ viewMode, onViewModeChange }) => {
         return (

@@ -1,11 +1,11 @@
 import React from 'react'
-      import PropTypes from 'prop-types'
-      import Label from '@/components/atoms/Label'
-      import Input from '@/components/atoms/Input'
-      import Select from '@/components/atoms/Select'
-      import Checkbox from '@/components/atoms/Checkbox'
-      import Text from '@/components/atoms/Text'
-      
+import PropTypes from 'prop-types'
+
+import Checkbox from '../atoms/Checkbox'
+import Input from '../atoms/Input'
+import Label from '../atoms/Label'
+import Select from '../atoms/Select'
+import Text from '../atoms/Text'
       const FilterGroup = ({ label, type, value, onChange, options, propertyTypes = [], className = '' }) => {
         const id = label.toLowerCase().replace(/\s/g, '-')
       
@@ -28,13 +28,13 @@ import React from 'react'
           />
         )
       
-        const renderCheckboxes = () => (
+const renderCheckboxes = () => (
           <div className="space-y-1">
             {propertyTypes.map((propType) => (
               <Label key={propType} htmlFor={`${id}-${propType}`} className="flex items-center">
                 <Checkbox
                   id={`${id}-${propType}`}
-                  checked={value.includes(propType)}
+                  checked={Array.isArray(value) && value.includes(propType)}
                   onChange={() => onChange(propType)}
                 />
                 <Text as="span" className="text-sm text-surface-700 dark:text-surface-300 ml-2">{propType}</Text>

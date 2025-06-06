@@ -1,8 +1,8 @@
 import React from 'react'
-      import PropTypes from 'prop-types'
-      import Icon from '@/components/atoms/Icon'
-      import Text from '@/components/atoms/Text'
-      
+import PropTypes from 'prop-types'
+
+import Icon from '../atoms/Icon'
+import Text from '../atoms/Text'
       const StatCard = ({ iconName, value, label }) => {
         return (
           <div className="text-center p-3 bg-surface-50 dark:bg-surface-700 rounded-lg">

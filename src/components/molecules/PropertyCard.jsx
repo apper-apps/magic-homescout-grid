@@ -1,9 +1,9 @@
 import React from 'react'
-      import PropTypes from 'prop-types'
-      import { motion } from 'framer-motion'
-      import Icon from '@/components/atoms/Icon'
-      import Button from '@/components/atoms/Button'
-      import Text from '@/components/atoms/Text'
+import PropTypes from 'prop-types'
+import { motion } from 'framer-motion'
+import Icon from '../atoms/Icon'
+import Button from '../atoms/Button'
+import Text from '../atoms/Text'
       
       const PropertyCard = ({ property, isFavorite, onClick, onToggleFavorite }) => {
         return (

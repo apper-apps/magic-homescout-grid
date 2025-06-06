@@ -1,27 +1,27 @@
 import React from 'react'
-      import PropTypes from 'prop-types'
-      import PropertyCard from '@/components/molecules/PropertyCard'
-      import Icon from '@/components/atoms/Icon'
-      import Text from '@/components/atoms/Text'
+import PropTypes from 'prop-types'
+import PropertyCard from '../molecules/PropertyCard'
+import Icon from '../atoms/Icon'
+import Text from '../atoms/Text'
       
-      const PropertyGrid = ({ properties, favorites, viewMode, onPropertyClick, onToggleFavorite }) => {
-        return (
-          <>
-            <div className={`grid gap-6 ${
-              viewMode === 'grid'
-                ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
-                : 'grid-cols-1'
-            }`}>
-              {properties.map(property => (
-                <PropertyCard
-                  key={property.id}
-                  property={property}
-                  isFavorite={favorites.some(fav => fav.propertyId === property.id)}
-                  onClick={() => onPropertyClick(property)}
-                  onToggleFavorite={onToggleFavorite}
-                />
-              ))}
-            </div>
+const PropertyGrid = ({ properties = [], favorites = [], viewMode = 'grid', onPropertyClick, onToggleFavorite }) => {
+  return (
+    <>
+      <div className={`grid gap-6 ${
+        viewMode === 'grid'
+          ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+          : 'grid-cols-1'
+      }`}>
+        {properties.map(property => (
+          <PropertyCard
+            key={property.id}
+            property={property}
+            isFavorite={Array.isArray(favorites) && favorites.some(fav => fav && fav.propertyId === property.id)}
+            onClick={() => onPropertyClick && onPropertyClick(property)}
+            onToggleFavorite={onToggleFavorite}
+          />
+        ))}
+      </div>
       
             {properties.length === 0 && (
               <div className="text-center py-12">
@@ -38,12 +38,12 @@ import React from 'react'
         )
       }
       
-      PropertyGrid.propTypes = {
-        properties: PropTypes.arrayOf(PropTypes.object).isRequired,
-        favorites: PropTypes.arrayOf(PropTypes.object).isRequired,
-        viewMode: PropTypes.oneOf(['grid', 'list']).isRequired,
-        onPropertyClick: PropTypes.func.isRequired,
-        onToggleFavorite: PropTypes.func.isRequired,
-      }
+PropertyGrid.propTypes = {
+  properties: PropTypes.arrayOf(PropTypes.object),
+  favorites: PropTypes.arrayOf(PropTypes.object),
+  viewMode: PropTypes.oneOf(['grid', 'list']),
+  onPropertyClick: PropTypes.func,
+  onToggleFavorite: PropTypes.func,
+}
       
       export default PropertyGrid

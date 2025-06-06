@@ -1,8 +1,8 @@
 import React from 'react'
-      import PropTypes from 'prop-types'
-      import { motion, AnimatePresence } from 'framer-motion'
-      import FilterGroup from '@/components/molecules/FilterGroup'
-      import Button from '@/components/atoms/Button'
+import PropTypes from 'prop-types'
+import { motion, AnimatePresence } from 'framer-motion'
+import FilterGroup from '../molecules/FilterGroup'
+import Button from '../atoms/Button'
       
       const FilterSection = ({ showFilters, filters, onFilterChange, onClearFilters }) => {
         const propertyTypes = ['House', 'Apartment', 'Condo', 'Townhouse', 'Villa']
@@ -55,7 +55,7 @@ import React from 'react'
                     label="Bathrooms"
                     type="select"
                     value={filters.bathrooms}
-                    onChange={(e) => onFilterChange('bathrooms', e.target.value)}
+onChange={(e) => onFilterChange('bathrooms', e.target.value)}
                     options={bathroomsOptions}
                   />
                   <FilterGroup
@@ -63,7 +63,7 @@ import React from 'react'
                     type="checkbox-group"
                     value={filters.propertyType}
                     onChange={(value) => onFilterChange('propertyType', value)}
-                    propertyTypes={propertyTypes}
+                    options={propertyTypes.map(type => ({ value: type, label: type }))}
                   />
                 </div>
       

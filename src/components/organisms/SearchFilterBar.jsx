@@ -1,10 +1,10 @@
 import React from 'react'
-      import PropTypes from 'prop-types'
-      import SearchBar from '@/components/molecules/SearchBar'
-      import Button from '@/components/atoms/Button'
-      import Icon from '@/components/atoms/Icon'
-      import Text from '@/components/atoms/Text'
-      import FilterSection from '@/components/organisms/FilterSection'
+import PropTypes from 'prop-types'
+import SearchBar from '../molecules/SearchBar'
+import Button from '../atoms/Button'
+import Icon from '../atoms/Icon'
+import Text from '../atoms/Text'
+import FilterSection from '../molecules/FilterSection'
       
       const SearchFilterBar = ({
         searchTerm,
