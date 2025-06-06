@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ApperIcon from '../icons/ApperIcon'
+import ApperIcon from '../molecules/ApperIcon'
       
 const Icon = ({ name, size, className = '', ...props }) => {
   return (
