@@ -1,0 +1,413 @@
+[
+  {
+    "id": "1",
+    "title": "Modern Luxury Villa in Beverly Hills",
+    "price": 2850000,
+    "type": "Villa",
+    "bedrooms": 5,
+    "bathrooms": 4,
+    "sqft": 4200,
+    "address": {
+      "street": "1247 Hillcrest Drive",
+      "city": "Beverly Hills",
+      "state": "CA",
+      "zipCode": "90210"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?w=800&h=600&fit=crop"
+    ],
+    "description": "Stunning contemporary villa featuring an open floor plan, floor-to-ceiling windows, and breathtaking views of the city. This luxurious home boasts high-end finishes throughout, including marble countertops, hardwood floors, and a gourmet kitchen with premium appliances.",
+    "features": [
+      "Swimming Pool",
+      "Gourmet Kitchen",
+      "Walk-in Closets",
+      "Hardwood Floors",
+      "City Views",
+      "2-Car Garage",
+      "Home Theater",
+      "Wine Cellar"
+    ],
+    "coordinates": {
+      "lat": 34.0736,
+      "lng": -118.4004
+    },
+    "listedDate": "2024-01-15T10:00:00Z"
+  },
+  {
+    "id": "2",
+    "title": "Charming Downtown Loft",
+    "price": 650000,
+    "type": "Apartment",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "sqft": 1200,
+    "address": {
+      "street": "415 Spring Street",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zipCode": "90013"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=600&fit=crop"
+    ],
+    "description": "Industrial-chic loft in the heart of downtown with exposed brick walls, concrete floors, and soaring ceilings. Perfect for urban professionals seeking a modern lifestyle with easy access to restaurants, entertainment, and public transportation.",
+    "features": [
+      "Exposed Brick",
+      "High Ceilings",
+      "Modern Kitchen",
+      "In-unit Laundry",
+      "Rooftop Access",
+      "Gym Access",
+      "Concierge"
+    ],
+    "coordinates": {
+      "lat": 34.0522,
+      "lng": -118.2437
+    },
+    "listedDate": "2024-01-18T14:30:00Z"
+  },
+  {
+    "id": "3",
+    "title": "Family-Friendly Suburban Home",
+    "price": 875000,
+    "type": "House",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "sqft": 2800,
+    "address": {
+      "street": "2156 Maple Avenue",
+      "city": "Pasadena",
+      "state": "CA",
+      "zipCode": "91104"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&h=600&fit=crop"
+    ],
+    "description": "Beautiful two-story home in a quiet neighborhood with excellent schools nearby. Features a spacious backyard, updated kitchen, and plenty of storage throughout. Perfect for growing families looking for comfort and convenience.",
+    "features": [
+      "Large Backyard",
+      "Updated Kitchen",
+      "Master Suite",
+      "2-Car Garage",
+      "Near Schools",
+      "Fireplace",
+      "Patio Deck"
+    ],
+    "coordinates": {
+      "lat": 34.1478,
+      "lng": -118.1445
+    },
+    "listedDate": "2024-01-20T09:15:00Z"
+  },
+  {
+    "id": "4",
+    "title": "Oceanfront Condo with Panoramic Views",
+    "price": 1250000,
+    "type": "Condo",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "sqft": 1800,
+    "address": {
+      "street": "1001 Ocean Boulevard",
+      "city": "Santa Monica",
+      "state": "CA",
+      "zipCode": "90401"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?w=800&h=600&fit=crop"
+    ],
+    "description": "Wake up to stunning ocean views every morning in this beautifully appointed beachfront condominium. Features floor-to-ceiling windows, modern amenities, and direct beach access. Resort-style living at its finest.",
+    "features": [
+      "Ocean Views",
+      "Beach Access",
+      "Balcony",
+      "Modern Appliances",
+      "Pool & Spa",
+      "Valet Parking",
+      "24/7 Security"
+    ],
+    "coordinates": {
+      "lat": 34.0194,
+      "lng": -118.4912
+    },
+    "listedDate": "2024-01-12T16:45:00Z"
+  },
+  {
+    "id": "5",
+    "title": "Historic Craftsman Bungalow",
+    "price": 925000,
+    "type": "House",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "sqft": 1950,
+    "address": {
+      "street": "734 Magnolia Street",
+      "city": "Glendale",
+      "state": "CA",
+      "zipCode": "91206"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=800&h=600&fit=crop"
+    ],
+    "description": "Meticulously restored 1920s Craftsman bungalow with original hardwood floors, built-in cabinetry, and period details. The perfect blend of historic charm and modern conveniences in a tree-lined neighborhood.",
+    "features": [
+      "Original Hardwood",
+      "Built-in Cabinets",
+      "Period Details",
+      "Updated Kitchen",
+      "Detached Garage",
+      "Front Porch",
+      "Mature Trees"
+    ],
+    "coordinates": {
+      "lat": 34.1425,
+      "lng": -118.2551
+    },
+    "listedDate": "2024-01-22T11:20:00Z"
+  },
+  {
+    "id": "6",
+    "title": "Contemporary Townhouse",
+    "price": 725000,
+    "type": "Townhouse",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "sqft": 2100,
+    "address": {
+      "street": "567 Valley View Drive",
+      "city": "Burbank",
+      "state": "CA",
+      "zipCode": "91505"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1601760562234-9814eea6663a?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800&h=600&fit=crop"
+    ],
+    "description": "Modern three-story townhouse with an open concept design and private patio. Features stainless steel appliances, quartz countertops, and a two-car attached garage. Low-maintenance living in a gated community.",
+    "features": [
+      "Open Concept",
+      "Quartz Counters",
+      "Stainless Appliances",
+      "Private Patio",
+      "Attached Garage",
+      "Gated Community",
+      "HOA Amenities"
+    ],
+    "coordinates": {
+      "lat": 34.1808,
+      "lng": -118.3090
+    },
+    "listedDate": "2024-01-25T08:30:00Z"
+  },
+  {
+    "id": "7",
+    "title": "Luxury Penthouse Suite",
+    "price": 3200000,
+    "type": "Apartment",
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "sqft": 3500,
+    "address": {
+      "street": "8899 Beverly Boulevard",
+      "city": "West Hollywood",
+      "state": "CA",
+      "zipCode": "90048"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=800&h=600&fit=crop"
+    ],
+    "description": "Spectacular penthouse with 360-degree city views, private elevator access, and wraparound terraces. This sophisticated residence features custom millwork, Italian marble, and state-of-the-art smart home technology.",
+    "features": [
+      "360° City Views",
+      "Private Elevator",
+      "Wraparound Terrace",
+      "Smart Home Tech",
+      "Italian Marble",
+      "Custom Millwork",
+      "Wine Storage",
+      "Concierge Service"
+    ],
+    "coordinates": {
+      "lat": 34.0754,
+      "lng": -118.3984
+    },
+    "listedDate": "2024-01-10T13:00:00Z"
+  },
+  {
+    "id": "8",
+    "title": "Cozy Starter Home",
+    "price": 485000,
+    "type": "House",
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "sqft": 950,
+    "address": {
+      "street": "1823 Cedar Lane",
+      "city": "El Monte",
+      "state": "CA",
+      "zipCode": "91732"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop"
+    ],
+    "description": "Perfect first home with great potential for customization. Features a large lot with mature fruit trees, original hardwood floors, and a charming front porch. Ideal for buyers looking to build equity.",
+    "features": [
+      "Large Lot",
+      "Fruit Trees",
+      "Hardwood Floors",
+      "Front Porch",
+      "Fixer Potential",
+      "Quiet Street",
+      "Near Transit"
+    ],
+    "coordinates": {
+      "lat": 34.0686,
+      "lng": -118.0275
+    },
+    "listedDate": "2024-01-28T15:45:00Z"
+  },
+  {
+    "id": "9",
+    "title": "Mid-Century Modern Gem",
+    "price": 1150000,
+    "type": "House",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "sqft": 2200,
+    "address": {
+      "street": "4521 Hillview Drive",
+      "city": "Sherman Oaks",
+      "state": "CA",
+      "zipCode": "91423"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1571939228382-b2f2b585ce15?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop"
+    ],
+    "description": "Authentic 1960s mid-century modern home with vaulted ceilings, walls of glass, and seamless indoor-outdoor living. Recently updated while preserving the original architectural integrity and style.",
+    "features": [
+      "Vaulted Ceilings",
+      "Walls of Glass",
+      "Pool & Spa",
+      "Original Features",
+      "Canyon Views",
+      "Updated Systems",
+      "Private Deck"
+    ],
+    "coordinates": {
+      "lat": 34.1508,
+      "lng": -118.4479
+    },
+    "listedDate": "2024-01-17T12:15:00Z"
+  },
+  {
+    "id": "10",
+    "title": "Investment Property Duplex",
+    "price": 795000,
+    "type": "House",
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "sqft": 2400,
+    "address": {
+      "street": "892 Rosewood Avenue",
+      "city": "Inglewood",
+      "state": "CA",
+      "zipCode": "90301"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=800&h=600&fit=crop"
+    ],
+    "description": "Excellent investment opportunity featuring two separate 2-bedroom, 2-bathroom units. Both units have been recently renovated with new flooring, paint, and appliances. Strong rental history and upside potential.",
+    "features": [
+      "Two Units",
+      "Recently Renovated",
+      "Separate Meters",
+      "Parking Spaces",
+      "Laundry Hookups",
+      "Strong Rental History",
+      "Near LAX"
+    ],
+    "coordinates": {
+      "lat": 33.9617,
+      "lng": -118.3531
+    },
+    "listedDate": "2024-01-14T10:30:00Z"
+  },
+  {
+    "id": "11",
+    "title": "Spanish Colonial Revival",
+    "price": 1350000,
+    "type": "House",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "sqft": 3100,
+    "address": {
+      "street": "1567 Andalusia Drive",
+      "city": "Los Feliz",
+      "state": "CA",
+      "zipCode": "90027"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1554995207-c18c203602cb?w=800&h=600&fit=crop"
+    ],
+    "description": "Magnificent 1925 Spanish Colonial Revival home with original tile work, arched doorways, and a romantic courtyard. Beautifully maintained and updated for modern living while preserving historic character.",
+    "features": [
+      "Original Tile Work",
+      "Arched Doorways",
+      "Courtyard",
+      "Beamed Ceilings",
+      "Fireplace",
+      "Updated Kitchen",
+      "Historic Character"
+    ],
+    "coordinates": {
+      "lat": 34.1184,
+      "lng": -118.2851
+    },
+    "listedDate": "2024-01-19T14:00:00Z"
+  },
+  {
+    "id": "12",
+    "title": "Modern Farmhouse Style",
+    "price": 1050000,
+    "type": "House",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "sqft": 2650,
+    "address": {
+      "street": "3421 Oak Tree Lane",
+      "city": "Valencia",
+      "state": "CA",
+      "zipCode": "91354"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1502005229762-cf1b2da02f3f?w=800&h=600&fit=crop"
+    ],
+    "description": "Brand new construction featuring modern farmhouse design with shiplap walls, barn doors, and a gourmet kitchen with waterfall island. Located in a family-friendly community with top-rated schools.",
+    "features": [
+      "New Construction",
+      "Shiplap Walls",
+      "Barn Doors",
+      "Waterfall Island",
+      "Walk-in Pantry",
+      "Top-Rated Schools",
+      "Community Pool"
+    ],
+    "coordinates": {
+      "lat": 34.4208,
+      "lng": -118.5593
+    },
+    "listedDate": "2024-01-23T09:45:00Z"
+  }
+]
